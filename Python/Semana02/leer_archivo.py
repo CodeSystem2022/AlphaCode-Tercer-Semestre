@@ -10,3 +10,4 @@ archivo = open('prueba.txt', 'r', encoding='utf8') # las letras son: 'r' read, '
 # for linea in archivo:
     # print(linea) # iteramos todos los elementos del archivo
 print(archivo.readlines()[11]) #accedemos al archivo como si fuera una lista
+ 
