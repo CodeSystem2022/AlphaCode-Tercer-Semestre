@@ -9,16 +9,18 @@ Repositorio del Grupo Alpha Code para el Tercer Semestre.
 
 Integrantes:
 
-Gimena Perez
+Gimena Perez : Semana 01
 
-Nicolás Castro
+Nicolás Castro : Semana02
 
-Alessio Daniel
+Natalia Rivarola : Semana03
 
-Santiago Bordón
+Eric Maturano : Semana04
 
-Natalia Rivarola
+Alessio Daniel : Semana05
 
-Carla Rosales
+Santiago Bordón : Semana06
 
-Eric Maturano
+Carla Rosales : Semana07
+
+Gimena Perez : Semana 08
