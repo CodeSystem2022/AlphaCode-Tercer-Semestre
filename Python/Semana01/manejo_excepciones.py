@@ -1,3 +1,4 @@
+from NumerosIgualesException import NumerosIgualesException
 resultado =  None
 
 try:
