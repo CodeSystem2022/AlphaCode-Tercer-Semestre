@@ -11,4 +11,4 @@ while opcion ! = 4:
         print(f'Ocurrió un error de tipo: {e}')
          opcion = None
      else:
-        print('salimos del programa")
+        print('salimos del programa')
