@@ -6,7 +6,7 @@ archivo = open('prueba.txt', 'r', encoding='utf8') # las letras son: 'r' read, '
 #print(archivo.readline())
 #print(archivo.readline())
 
-# vamos a terar el archivo, cada una de las líneas
+# vamos a iterar el archivo, cada una de las líneas
 # for linea in archivo:
     # print(linea) # iteramos todos los elementos del archivo
 print(archivo.readlines()[11]) #accedemos al archivo como si fuera una lista
