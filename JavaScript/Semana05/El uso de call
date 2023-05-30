@@ -1,0 +1,16 @@
+//Uso de call
+let persona4 = {
+	nombre: 'Juan',
+	apellido: 'Perez',
+	nombreCompleto2: function(titulo, telefono){
+		return titulo+': '+this.nombre+' '+this.apellido+' '+telefono;
+	}
+}
+
+let persona5 = {
+	nombre: 'Carlos',
+	apellido: 'Lara'
+}
+
+console.log(persona4.nombreCompleto2('Lic.', '549261848485'));  Lic.: Juan Perez 549261848485
+console.log(persona4.nombreCompleto2.call(persona5, 'Ing.', '549261848485'));  Ing.: Carlos Lara 549261848485
