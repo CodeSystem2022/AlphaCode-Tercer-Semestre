@@ -21,6 +21,6 @@ Alessio Daniel : Semana05
 
 Santiago Bordón : Semana06
 
-Natalia Rivarola, Nicolás Castro : Semana07
+Natalia Rivarola, Nicolás Castro, Eric Maturano : Semana07
 
 Carla Rosales : Semana 08
