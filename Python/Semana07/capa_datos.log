@@ -1,0 +1,5 @@
+2023-05-31 20:37:35,268:DEBUG [logger_base.py:22] Mensaje a nivel debug
+2023-05-31 20:37:35,268:INFO [logger_base.py:23] Mensaje a nivel info
+2023-05-31 20:37:35,268:WARNING [logger_base.py:24] Mensaje a nivel warning
+2023-05-31 20:37:35,274:ERROR [logger_base.py:25] Mensaje a nivel error
+2023-05-31 20:37:35,274:CRITICAL [logger_base.py:26] Mensaje a nivel critical
