@@ -13,4 +13,11 @@ public class TestSobreescritura {
 Navigator public static void main(String[] args) {
 Gerente gerentel = new Gerente ("José", 5000, "Sistemas")
 System.out.println("gerente1 = " + gerente1.obtenerDetalles());
+  
+  
+  
+  //Sobreescribimos el método
+@Override
+public String obtenerDetalles ()
+return super.obtenerDetalles ()+", Departamento: "+this.departamento;
 }
