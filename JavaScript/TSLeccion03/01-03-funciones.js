@@ -30,7 +30,18 @@ miFuncionDos(5, 7, 3, 6);
 
 // toString
 var miFuncionTexto = miFuncionDos.toString(); //convierte la funcion a texto
-console.log(miFuncionTexto); 
+console.log(miFuncionTexto);
+
+//Funciones flecha
+const sumarFuncionFlecha = (a, b) => a + b;
+resultado = sumarFuncionFlecha(3, 7);//Asignamos el valor a una variable
+console.log(resultado);
+
+let sumar = function(a = 4, b = 8){
+    console.log (arguments[0]); //muestra el parametro de: a
+    console.log (arguments[1]); //muestra el parametro de: b
+    return a + b + arguments [2]; 
+}
 
 
 
