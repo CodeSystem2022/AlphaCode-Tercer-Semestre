@@ -108,7 +108,6 @@ console.log(Persona.MAX_OBJ);
 //Persona.MAX_OBJ = 10; No se puede modificar ni alterar
 console.log(Persona.MAX_OBJ);
 
-
 let persona4 = new Persona('Franco', 'Diaz');
 console.log(persona4.toString());
 let persona5 = new Persona('Liliana', 'Paz');
