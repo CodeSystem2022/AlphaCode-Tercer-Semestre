@@ -14,3 +14,7 @@ for(let i = 0; i < autos.length; i++){
 // Modificamos los elementos del arreglo
 autos[1] = 'Volvo';
 console.log(autos[1]);
+
+// Agregamos nuevos valores al arrelgo
+autos.push('Audi'); // Agregamos el elemento al final del arreglo
+console.log(autos);
