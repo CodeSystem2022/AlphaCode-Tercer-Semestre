@@ -9,4 +9,30 @@ class Persona{ //Clase padre
         return 5;
     }
 
-    
+    constructor(nombre, apellido){
+        this._nombre = nombre;
+        this._apellido = apellido;
+        if(Persona.contadorPersonas < Persona.MAX_OBJ){
+            this.idPersona = ++Persona.contadorPersonas;
+        }
+        else{
+            console.log('Se ha superado el máximo de objetos permitidos');
+        }
+        //console.log('Se incrementa el contador: '+Persona.contadorObjetosPersona);
+    }
+
+    get nombre(){
+        return this._nombre;
+    }
+
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+
+    get apellido(){
+        return this._apellido;
+    }
+
+    set apellido(apellido){
+        this._apellido = apellido;
+    }
