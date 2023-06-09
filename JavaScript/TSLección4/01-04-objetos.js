@@ -32,3 +32,8 @@ console.log('Cambiamos y eliminamos un error');
 persona.apellida = 'Castro'; //Cambiamos dinamicamente un valor del objeto
 delete persona.apellida; //Eliminamos el error 
 console.log(persona);
+
+//Distintas formas de imprimir un objeto
+//Número 1: La mas sencilla_ concatenar cada valor de cada propiedad
+console.log('Distinta formas de imprimir un objeto: forma 1') 
+console.log(persona.nombre+', '+persona.apellido);
