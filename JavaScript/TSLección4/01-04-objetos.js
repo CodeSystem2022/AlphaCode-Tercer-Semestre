@@ -56,8 +56,6 @@ Let personaArray = Object.values(persona);
 console.log(personaArray);
 
 //Número 4: Utilizaremos el metodo JSON.stringify
-console.log('Distinta formas de imprimir un objeto: forma 
-
-') 
+console.log('Distinta formas de imprimir un objeto: forma ') 
 Let personaString = JSON.stringify(persona);
 console.log(personaString); 
