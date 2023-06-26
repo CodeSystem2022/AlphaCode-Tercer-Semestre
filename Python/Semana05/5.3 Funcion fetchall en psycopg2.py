@@ -8,7 +8,7 @@ try:
             entrada = input(f'Digite los id_persona a buscar (separados por coma): ')
             llaves_primarias = (tuple(entrada.split(', ')),)
             cursor.execute(sentencia, llaves_primarias) # De esta manera ejecutamos la sentencia
-            registros = cursor.fetchall() #Recuperamos todos los registros que serán una lista
+            registros = cursor.fetchall()  #Recuperamos todos los registros que serán una lista
             for registro in registros:
                 print(registro)
 except Exception as e:
