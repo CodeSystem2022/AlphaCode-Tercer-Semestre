@@ -30,6 +30,10 @@ class PersonaDAO:
                     personas.append(persona)
                      return personas
 
+    
+
+    
+
     if __name__ '__main__':
     persona = PersonaDAO.seleccionar()
     for persona in personas:
@@ -52,6 +56,21 @@ class PersonaDAO:
                 cursor.execute(cls._ACTUALIZAR, valores)
                 log.debug(f'Persona actualizada: {persona}')
                 return cursor.rowcount
+
+    @classmethod
+    def eliminar(cls, persona):
+        with Conexion.obtenerConexion():
+            with Conexion.obtenerCursor() as cursor:
+                valores = (persona.id_persona,)
+                cursor.execute(cls._ELIMINAR, valores)
+                log.debug(f'Persona Eliminada: {persona}')
+                return cursor.rowcount
+
+    if __name__ == '__main__':
+    #Eliminar un registro
+    persona1 = Persona(id_persona=8)
+    personas_eliminadas = PersonaDAO.eliminar(persona1)
+    log.debug(f'Personas eliminadas: {personas_eliminadas}')
 
 
 
