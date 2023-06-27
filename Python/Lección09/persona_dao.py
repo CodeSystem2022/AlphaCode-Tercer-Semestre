@@ -19,7 +19,7 @@ class PersonaDAO:
         #Definimos los métodos de clase
     @classmethod
     def seleccionar(cls, registros=None):
-        with Conexion.obtenerConexion():
+        #with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
                 registro = cursor.fetchall()
@@ -39,6 +39,15 @@ class PersonaDAO:
                 return cursor.rowcount
 
     @classmethod
+    def actualizar(cls,perosna):
+        with Conexion.obtenerConexion():
+            with Conexion.obtenerCursor() as cursor:
+                valores = (persona.nombre, persona.apellido, persona.email, persona.id_persona)
+                cursor.execute(cls._ACTUALIZAR, valores)
+                log.debug(f'Persona actualizada: {persona}')
+                return cursor.rowcount
+
+    @classmethod
     def eliminar(cls, persona):
         with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
@@ -47,18 +56,21 @@ class PersonaDAO:
                 log.debug(f'Persona Eliminada: {persona}')
                 return cursor.rowcount
 
-
-
 if __name__ == '__main__':
     #Eliminar un registro
     persona1 = Persona(id_persona=13)
     personas_eliminadas = PersonaDAO.eliminar(persona1)
     log.debug(f'Personas eliminadas: {personas_eliminadas}')
 
+    #Actualizar un registro
+    # persona1 = Persona(1, 'Juan José', 'Pena', 'jpena@mail.com')
+    # personas_actualizadas = PersonaDAO.actualizar(persona1)
+    # log.debug(f'Personas actualizadas: {personas_actualizadas}')
+    
     #Insertar un registro
-    persona1 = Persona(nombre='Pedro', apellido='Romero', email='promero@mail.com')
-    personas_insertadas = PersonaDAO.insertar(persona1)
-    log.debug(f'Personas Insertadas: {personas_insertadas}')
+    #persona1 = Persona(nombre='Omero', apellido='Ramos', email='omeror@mail.com')
+    #personas_insertadas = PersonaDAO.insertar(persona1)
+    #log.debug(f'Personas Insertadas: {personas_insertadas}')
 
     # Seleccionar objetos
     personas = PersonaDAO.seleccionar()
