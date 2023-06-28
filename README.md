@@ -24,3 +24,5 @@ Santiago Bordón : Semana06
 Natalia Rivarola, Nicolás Castro, Eric Maturano : Semana07
 
 Carla Rosales : Semana 08
+
+Natalia Rivarola : Semana09
