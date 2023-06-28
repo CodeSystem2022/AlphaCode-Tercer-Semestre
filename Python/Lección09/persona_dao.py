@@ -40,6 +40,7 @@ class PersonaDAO:
         log.debug(persona)
 
     @classmethod
+    #Método Insertar
     def insertar(cls, persona):
         with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
