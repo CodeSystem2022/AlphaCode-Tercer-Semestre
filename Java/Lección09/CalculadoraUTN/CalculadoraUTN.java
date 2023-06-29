@@ -38,8 +38,27 @@ public class CalculadoraUTN {
             System.out.print("Digite el valor para el operando2: ");
             var operando2 = Integer.parseInt(entrada.nextLine());
 
-
-        }
+            int resultado;
+            switch(operacion){
+                case 1 -> {
+                    resultado = operando1 + operando2;
+                    System.out.println("Resultado de la suma: "+resultado);
+                }
+                case 2 -> {
+                    resultado = operando1 - operando2;
+                    System.out.println("Resultado de la resta: "+resultado);
+                }
+                 case 4 ->{
+                    resultado = operando 1 * operando 2;
+                    System.out.println("Resultado de la multiplicación: "+resultado)case 3 -> {
+                    resultado = operando1 / operando2;
+                    System.out.println("Resultado de la división: "+resultado);
+                }
+                case 4 ->{
+                    resultado = operando1 / operando2;
+                    System.out.println("Resultado de la división: "+resultado);
+                }
+                default -> System.out.println("Opción erronea "+operacion);
 
     }
 }
