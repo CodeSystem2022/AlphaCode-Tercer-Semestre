@@ -1,4 +1,4 @@
-class Empleaños extends Persona{
+class Empleados extends Persona{
 
     static contadorEmpleados = 0;
     constructor(nombre, apellido, edad, sueldo){
