@@ -1,0 +1,21 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><element><id>UMLClass</id><coordinates><x>264</x><y>66</y><w>253</w><h>484</h></coordinates><panel_attributes>Persona
+--
+-id : int
+-Nombre : String
+-tel : string
+-email : string
+__-NumeroPersonas : int__
+--
++getld()
++setld(id:int)
++getNombre()
++setNombre(nombre: string)
+*getTel()
++setTel(tel: String)
+*getEmail()
++setEmail(email: String)
++tostring()
+
+--
+Responsibilities
+-- Creación de objetos de tipo Persona</panel_attributes><additional_attributes></additional_attributes></element></diagram>
