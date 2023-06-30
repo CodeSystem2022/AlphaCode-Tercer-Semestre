@@ -55,7 +55,7 @@ public class CalculadoraUTN {
                     resultado = operando1 - operando2;
                     System.out.println("Resultado de la resta: "+resultado);
                 }
-                case 3 -> { //Multiplicacion
+                case 3 -> { 
                 resultado = operando1 * operando2;
                 System.out.print("Resultado de la multiplicacion: " + resultado);
                 }
