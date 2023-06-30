@@ -12,11 +12,11 @@ class Empleados extends Persona{
     }
 
     get sueldo(){
-        this.sueldo;
+        this._sueldo;
     }
 
     set sueldo(sueldo){
-        this.sueldo = sueldo;
+        this._sueldo = sueldo;
     }
 
     toString(){
