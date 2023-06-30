@@ -20,24 +20,15 @@ class PersonaDAO:
         #Definimos los métodos de clase
     @classmethod
     def seleccionar(cls, registros=None):
-        #with Conexion.obtenerConexion():
+        with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
-                registro = cursor.fetchall()
+                registros = cursor.fetchall()
                 personas = [] #Creamos una lista
                 for registro in registros:
                     persona = Persona(registro[0], registro[1], registro[2], registro[3])
                     personas.append(persona)
-                     return personas
-
-    
-
-    
-
-    if __name__ '__main__':
-    persona = PersonaDAO.seleccionar()
-    for persona in personas:
-        log.debug(persona)
+                return personas
 
     @classmethod
     #Método Insertar
@@ -50,7 +41,7 @@ class PersonaDAO:
                 return cursor.rowcount
 
     @classmethod
-    def actualizar(cls,perosna):
+    def actualizar(cls,persona):
         with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
                 valores = (persona.nombre, persona.apellido, persona.email, persona.id_persona)
@@ -68,22 +59,20 @@ class PersonaDAO:
                 return cursor.rowcount
 
     if __name__ == '__main__':
-    #Eliminar un registro
-    persona1 = Persona(id_persona=8)
-    personas_eliminadas = PersonaDAO.eliminar(persona1)
-    log.debug(f'Personas eliminadas: {personas_eliminadas}')
+    # Eliminar un registro
+    # persona1 = Persona(id_persona=8)
+    # personas_eliminadas = PersonaDAO.eliminar(persona1)
+    # log.debug(f'Personas eliminadas: {personas_eliminadas}')
 
-
-
-    #Actualizar un registro
+    # Actualizar un registro
     # persona1 = Persona(1, 'Juan José', 'Pena', 'jpena@mail.com')
     # personas_actualizadas = PersonaDAO.actualizar(persona1)
     # log.debug(f'Personas actualizadas: {personas_actualizadas}')
     
-    #Insertar un registro
-    #persona1 = Persona(nombre='Omero', apellido='Ramos', email='omeror@mail.com')
-    #personas_insertadas = PersonaDAO.insertar(persona1)
-    #log.debug(f'Personas Insertadas: {personas_insertadas}')
+    # Insertar un registro
+    # persona1 = Persona(nombre='Omero', apellido='Ramos', email='omeror@mail.com')
+    # personas_insertadas = PersonaDAO.insertar(persona1)
+    # log.debug(f'Personas Insertadas: {personas_insertadas}')
 
     # Seleccionar objetos
     personas = PersonaDAO.seleccionar()
