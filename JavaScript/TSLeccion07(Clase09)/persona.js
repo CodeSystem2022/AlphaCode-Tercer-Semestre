@@ -3,40 +3,40 @@ class Persona{
     static contadorPersonas = 0;
                          
                             
-constructor(nombre, apellido, edad){
-    this._idPersona = ++Persona.contadorPersonas;
+   constructor(nombre, apellido, edad){
+    this._idPersona = +.                            +Persona.contadorPersonas;
     this._nombre = nombre;
     this._apellido = apellido;
     this._edad = edad;
 }
 
-get idPersona(){
+  get idPersona(){
     return this._idPersona;
 }
-get nombre(){
+  get nombre(){
    this._nombre;
 }
-set nombre(nombre){
+  set nombre(nombre){
    this._nombre = nombre;
 
 }
 
-get apellido(){
+  get apellido(){
     return this._apellido;
  }
 
- set apellido(apellido){
+  set apellido(apellido){
     this._apellido = apellido;
  }
-get edad(){
+  get edad(){
     return this._edad;
  }
- set edad(edad){
+  set edad(edad){
     this._edad = edad;
  
  }
 
- toString(){
+  toString(){
     return `
    ${this._idPersona}
    ${this._nombre}
