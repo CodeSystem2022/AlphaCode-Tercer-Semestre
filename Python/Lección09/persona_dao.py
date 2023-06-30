@@ -17,10 +17,10 @@ class PersonaDAO:
     _ACTUALIZAR ='UPDATE persona SET nombre=%s, apellido=%s, email=%s WHUERE id_persona=%s'
     _ELIMINAR = 'DELETE FROM persona WHERE id_persona=%s'
 
-        #Definimos los métodos de clase
+            #Definimos los métodos de clase
     @classmethod
-    def seleccionar(cls, registros=None):
-        with Conexion.obtenerConexion():
+    def seleccionar(cls):
+        #with Conexion.obtenerConexion():
             with Conexion.obtenerCursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
                 registros = cursor.fetchall()
