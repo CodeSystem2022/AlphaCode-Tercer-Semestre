@@ -1,9 +1,8 @@
-
 import java.util.Scanner;
 public class CalculadoraUTN {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        while (true) {
+        while (true) { //Ciclo infinito
         System.out.println("******* Aplicacion Calculadora *******");
         mostrarMenu();//Mostramos el menú
           try {
@@ -24,9 +23,9 @@ public class CalculadoraUTN {
             } catch (Exception e){ //Fin del try, comienzo del catch
                 System.out.println("Ocurrio ubn error: "+e.getMessage());
                 System.out.println();
-            } 
-        } 
-    } 
+            } //Fin catch
+        } //Fin while
+    } //Fin Main
 
     private static void mostarMenu(){
         //Mostramos el menu
@@ -67,29 +66,6 @@ public class CalculadoraUTN {
                     System.out.println("Resultado de la división: "+resultado);
                 }
                 default -> System.out.println("Opción erronea "+operacion);
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        break; //Rompe el ciclo y sale
-
-        //Imprimimos un salto de Linea antes de repetir el menú
-       
-
-    System.out.println();
-         } //Fin while
+            } //Fin switch
+    }//Fin método Ejecutar operación
+}//Fin clase
