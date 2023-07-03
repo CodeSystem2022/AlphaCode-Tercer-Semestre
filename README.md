@@ -28,3 +28,6 @@ Carla Rosales : Semana 08
 Natalia Rivarola : Semana09
 
 Alessio Daniel : Semana10
+
+Gimena Perez : Semana11
+
