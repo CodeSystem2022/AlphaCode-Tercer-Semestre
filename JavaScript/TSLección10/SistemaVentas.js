@@ -31,32 +31,6 @@ class Producto{
     }
 }//fin de la clase producto
 
-class Orden{
-    static contadorOrdenes = 0;
-    static getMAX_PRODUCTOS(){
-        return 5;
-    }
-
-    constructor(){
-        this._idOrden = ++Orden.contadorOrdenes;
-        this._prodcutos = [];
-        this._contadorProductosAgregados = 0;
-    }
-
-    get idOrden(){
-        return this._idOrden;
-    }
-
-    agregarProducto(producto){
-        if(this._prodcutos.length < Orden.getMAX_PRODUCTOS()){
-            this._prodcutos.push(producto); //tenemos 2 tipos de sintaxis: 1
-            //this._prodcutos[this._contadorProductosAgregados++] = producto; //segunda sintaxis
-        }
-        else{
-            console.log('No se pueden agregar más productos');
-        }
-    }//Fin del método agregar producto
-} //Fin de la clase Orden
 
 
 let producto1 = new Producto('Pantalón', 200);
