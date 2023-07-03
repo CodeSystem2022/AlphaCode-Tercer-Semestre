@@ -31,3 +31,4 @@ Alessio Daniel : Semana10
 
 Gimena Perez : Semana11
 
+Nicolás Castro : Semana12
