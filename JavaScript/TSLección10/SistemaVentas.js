@@ -41,7 +41,7 @@ console.log(producto2.toString());
 
 class Orden{
   static contadorOrdenes = 0;
-  static get_MAX_PRODUCTOS(){
+  static get_MAX_PRODUCTOS(){ //Simula una constante
       return 5;
   }
 
@@ -67,23 +67,22 @@ class Orden{
       let totalVenta = 0;
       for(let producto of this._productos){
           totalVenta += producto.precio;
-      }
+      }//Fin ciclo for
       return totalVenta;
-  }
+  }//Fin del metodo calcularTotal
 
   mostrarOrden(){
-      let productosOrden = '';
+      let productosOrden = ' ';
       for(let producto of this._productos){
-          productosOrden += '\n{' + producto.toString() + '}';
-      }
+          productosOrden +=  '\n{ '+producto.toString()+' }';
+      }//Fin del ciclo for
       console.log(`Orden: ${this._idOrden} Total: $${this.calcularTotal()}, Productos: ${productosOrden}`);
-  }
-
+  }//Fin metodo mostrarOrden
 } //Fin de la clase Orden
 
-let producto1 = new Producto('Pantalon', 200);
-let producto2 = new Producto('Camisa', 100);
-let producto3 = new Producto('Cinturon', 50);
+let Producto1 = new Producto('Pantalon', 200);
+let Producto2 = new Producto('Camisa', 100);
+let Producto3 = new Producto('Cinturon', 50);
 let orden1 = new Orden();
 let orden2 = new Orden();
 orden1.agregarProducto(producto1);
