@@ -1,0 +1,26 @@
+06:19:14 $p:DEBUG [logger_base.py:15]Mensaje a nivel debug
+06:19:14 $p:INFO [logger_base.py:16]Mensaje a nivel info
+06:19:14 $p:WARNING [logger_base.py:17]Mensaje a nivel warning
+06:19:14 $p:ERROR [logger_base.py:18]Mensaje a nivel error
+06:19:14 $p:CRITICAL [logger_base.py:19]Mensaje a nivel critical
+03:48:05 $p:DEBUG [Persona.py:54]<__main__.Persona object at 0x000001BDF4DA7F40>
+03:48:34 $p:DEBUG [Persona.py:54]<__main__.Persona object at 0x00000287ED877F40>
+03:50:34 $p:DEBUG [Persona.py:53]<__main__.Persona object at 0x0000022123863A30>
+03:52:25 $p:DEBUG [Persona.py:53]<__main__.Persona object at 0x000002478C453AF0>
+03:52:25 $p:DEBUG [Persona.py:55]<__main__.Persona object at 0x000002478C453CA0>
+03:53:40 $p:DEBUG [Persona.py:53]<__main__.Persona object at 0x00000239F965FFD0>
+03:53:40 $p:DEBUG [Persona.py:55]<__main__.Persona object at 0x00000239F965FD60>
+04:10:12 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+04:10:55 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+04:13:22 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+06:57:04 $p:DEBUG [Persona.py:55]<__main__.Persona object at 0x000002A7D102FD60>
+06:57:04 $p:DEBUG [Persona.py:57]<__main__.Persona object at 0x000002A7D102FD00>
+06:54:11 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+06:54:38 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+06:55:16 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+07:01:04 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+07:02:06 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+07:46:10 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+07:46:15 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+07:47:42 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
+07:47:47 $p:ERROR [conexion.py:28]Ocurrió un error: type object 'Conexion' has no attribute 'host'
