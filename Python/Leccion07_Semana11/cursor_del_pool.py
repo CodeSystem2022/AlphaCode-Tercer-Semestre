@@ -1,7 +1,6 @@
 from logger_base import log
 from conexion import Conexion
 
-
 class CursorDelPool:
     def __init__(self):
         self._conexion = None
@@ -24,8 +23,6 @@ class CursorDelPool:
         self._cursor.close()
         Conexion.liberarConexión(self._conexion)
        
-
-
 if __name__ == '__main__': 
      with CursorDelPool() as cursor: 
          log.debug('Dentro del bloque with') 
