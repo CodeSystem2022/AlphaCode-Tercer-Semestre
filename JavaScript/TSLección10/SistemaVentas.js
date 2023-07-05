@@ -37,6 +37,16 @@ let producto1 = new Producto('Pantalón', 200);
 let producto2 = new Producto('Camisa', 150);
 console.log(producto1.toString());
 console.log(producto2.toString());
+class Orden{
+  static contadorOrdenes = 0;
+  static get_MAX_PRODUCTOS(){ //Simula una constante
+      return 5;
+  }
+
+  constructor(){
+      this._idOrden = ++Orden.contadorOrdenes;
+      this._productos = [];
+      this._contadorProductosAgregados = 0;
 
 
 
