@@ -37,7 +37,7 @@ public class EstudianteDAO{
         return estudiantes;
         }//Fin metodo listar
 
-    //Metodo buscar por id - find by id
+       //Método por id -> fin by id
     public boolean buscarEstudiantePorId(Estudiante estudiante){
         PreparedStatement ps;
         ResultSet rs;
@@ -45,7 +45,7 @@ public class EstudianteDAO{
         String sql = "SELECT * FROM estudiantes2022 WHERE idestudiantes2022=?";
         try{
             ps = con.prepareStatement(sql);
-            ps.setInt(1,estudiante.getIdEstudiante());
+            ps.setInt(1, estudiante.getIdEstudiante());
             rs = ps.executeQuery();
             if(rs.next()){
                 estudiante.setNombre(rs.getString("nombre"));
@@ -54,19 +54,26 @@ public class EstudianteDAO{
                 estudiante.setEmail(rs.getString("email"));
                 return true; //Se encontro un registro
             }//Fin if
-        }catch (Exception e) {
-            System.out.println("Ocurrio un error al buscar estudiante: "+e.getMessage());
+        } catch (Exception e){
+            System.out.println("Ocurrió un error al buscar estudiante: "+e.getMessage());
         }//Fin catch
         finally {
             try {
                 con.close();
-            }
-            catch (Exception e){
-                System.out.println("Ocurrio un error al cerrar conexion: "+e.getMessage());
+            } catch (Exception e){
+                System.out.println("Ocurrió un error al cerrar la conexión: "+e.getMessage());
             }//Fin catch
         }//Fin finally
         return false;
-    } //Fin metodo buscar por id
+    }
+
+    public static void main(String[] args) {
+        //Listar los estudiantes
+        var estudianteDao = new EstudianteDAO();
+        System.out.println("Listado de estudiantes: ");
+        List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
+        estudiantes.forEach(System.out.println);//Función lambda para imprimir
+    } 
   
  // 12.6 Método agregarEstudiante() -> Parte 1 y 2  
 //Metodo agregar un nuevo estudiante
