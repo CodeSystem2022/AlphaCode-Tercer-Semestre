@@ -13,8 +13,7 @@ public class Conexion {
         var url = "jdbc:mysql://localhost:3306/"+baseDatos;
         var usuario = "root";
         var password = "admin";
-
-        //cargamos la clase de driver de mysql en memoria
+          //cargamos la clase de driver de mysql en memoria
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             conexion = DriverManager.getConnection(url, usuario, password);
