@@ -33,3 +33,102 @@ public class EstudianteDAO{
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // 12.6 Método agregarEstudiante() -> Parte 1 y 2  
+//Metodo agregar un nuevo estudiante
+        public boolean agregarEstudiante(Estudiante estudiante){
+            PreparedStatement ps;
+            Connection con = getConnection();
+            String sql = "INSERT INTO estudiantes2022 (nombre, apellido, telefono, email)VALUES (?, ?, ?, ?)";
+            try {
+                ps = con.prepareStatement(sql);
+                ps.setString(1, estudiate.getNombre());
+                ps.setString(2, estudiante.getApellido);
+                ps.setString(3, estudiante.getTelefono);
+                ps.setString(4, estudiante.getEmail);
+                ps.execute();
+                return  true;
+
+            }catch (Exception e){
+                System.out.println("Ocurrio un error al agregar un estudiante: "+e.getMessage());
+            }//Fin catch
+            finally {
+                try{
+                    con.close();
+                } catch (Exception e){
+                    System.out.println("Error al cerrar la conexion: "+e.getMessage());
+                }//Fin finally
+
+            }
+            return false;
+        }//Fin metodo agregarEstudiante
+
+    }
+
+
+
+
+  }
+    //12.7 Comenzamos con las pruebas del Método -> agregarEstudiante() Parte 1 y 2
+    //Agregar estudiante
+    var nuevoEstudiante = new Estudiante ("Carlos","Lara","548584884","carlos@email.com");
+    var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+    if(agregado)
+        System.out.println("Estudiante agregado: "+nuevoEstudiante);
+    else
+        System.out.println("No se ha agregado estudiante: "+nuevoEstudiante);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
