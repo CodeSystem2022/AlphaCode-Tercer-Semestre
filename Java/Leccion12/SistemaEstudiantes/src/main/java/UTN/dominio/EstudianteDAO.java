@@ -132,20 +132,48 @@ public class EstudianteDAO{
               return false;
           }//Fin método modificar estudiante
             //Fin 12.8 Agregamos el método -> modificarEstudiante()
+    public static void main(String[] args) {
+        var estudianteDao = new EstudianteDAO();
+        //Modificar estudiante
+        var estudianteModificado = new Estudiante(1,"Juan Carlos", "Juarez", "554346534", "juan@mail.com");
+        var modificado = EstudianteDAO.modificarEstudiante(estudianteModificado);
+        if(modificado)
+            System.out.println("Estudiante modificado: "+estudianteModificado);
+        else System.out.println("No se modificó el estudiante: "+estudianteModificado);
+
+        //Agregar estudiante
+        //var nuevoEstudiante = new Estudiante("Carlos", "Lara", "5494838439", "carlosl@mail.com");
+        //var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+        //if(agregado)
+        //    System.out.println("Estudiante agregado: "+nuevoEstudiante);
+        //else
+        //    System.out.println("No se ha agregado estudiante: "+nuevoEstudiante);
 
 
-  }
-    //12.7 Comenzamos con las pruebas del Método -> agregarEstudiante() Parte 1 y 2
-    //Agregar estudiante
-    var nuevoEstudiante = new Estudiante ("Carlos","Lara","548584884","carlos@email.com");
-    var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
-    if(agregado)
-        System.out.println("Estudiante agregado: "+nuevoEstudiante);
-    else
-        System.out.println("No se ha agregado estudiante: "+nuevoEstudiante);
-}
+        //Listar los estudiantes
+        System.out.println("Listado de estudiantes: ");
+        List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
+        estudiantes.forEach(System.out::println);//Función lambda para imprimir
+
+        //Agregar estudiante
+        //var nuevoEstudiante = new Estudiante("Carlos", "Lara", "5494838439", "carlosl@mail.com");
+        //var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+        //if(agregado)
+        //    System.out.println("Estudiante agregado: "+nuevoEstudiante);
+        //else
+        //    System.out.println("No se ha agregado estudiante: "+nuevoEstudiante);
 
 
+        //Buscar por id
+        //var estudiante1 = new Estudiante(1);
+        //System.out.println("Estudiantes antes de la búsqueda: "+estudiante1);
+        //var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
+        //if(encontrado)
+        //    System.out.println("Estudiante encontrado: "+estudiante1);
+        //else
+        //    System.out.println("No se encontró el estudiante: "+estudiante1.getIdEstudiante());
+    }
+}//Fin clase
 
 
 
